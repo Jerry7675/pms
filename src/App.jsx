@@ -1,4 +1,5 @@
 import Login_form from './Login_form';
+import { Routes, Route } from 'react-router-dom'
 import Registration from './Registration';
 import Forgot from './Forgot';
 import Otp from './Otp';
@@ -6,11 +7,15 @@ function App() {
 
   
   return (
+    
     <div className='flex flex-col justify-center'>
-    <Login_form />
-    <Registration />
-    <Forgot />
-    <Otp />
+      <Login_form />
+        <Routes>    
+      <Route path="/" element={<Login_form />} />
+      <Route path="/register" element={<Registration />} />
+      <Route path="/forgot" element={<Forgot />} />
+      <Route path="/otp" element={<Otp />} />
+    </Routes>
     </div>
     
   );

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 function Forgot(){
+  const navigate = useNavigate()
     const [formData, setFormData] = useState({
-      name: '',
       email: '',
-      password: ''
     });
     const handleSubmit = (e) => {
       e.preventDefault(); // This prevents page refresh
@@ -11,6 +11,8 @@ function Forgot(){
       console.log('Form data:', formData);
       // You can add API call here
     };
+    // Your validation logic here
+  
     const handleChange = (e) => {
       setFormData({
         ...formData,
@@ -26,7 +28,7 @@ function Forgot(){
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Remember your password?
             <a className="text-blue-600 decoration-2 hover:underline font-medium" href="#">
-              Login here
+            <Link to="/">Login here</Link>
             </a>
           </p>
         </div>
@@ -41,7 +43,7 @@ function Forgot(){
                 </div>
                 <p className="hidden text-xs text-red-600 mt-2" id="email-error">Please include a valid email address so we can get back to you</p>
               </div>
-              <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">Reset password</button>
+              <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">Reset password{ navigate('/otp')}</button>
             </div>
           </form>
         </div>
@@ -60,6 +62,7 @@ function Forgot(){
         Contact us!
       </a>
     </p>
+   
   </main>
        
     )

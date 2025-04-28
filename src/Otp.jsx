@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 function Otp({ otp, setOtp }) {
   const handleChange = (e) => {
     const { value } = e.target;
@@ -28,6 +29,7 @@ function Otp({ otp, setOtp }) {
             Confirm
         </button>
     </div>
+    <Link to="/">Back to Login</Link>
 </div>
   );
 }

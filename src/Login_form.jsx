@@ -1,9 +1,12 @@
 // Login_form.jsx
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
+
 
 
 
 function Login_form() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
   });
@@ -77,11 +80,16 @@ function Login_form() {
             </button>
             <div className="flex items-center text-sm">
               <p>Don't have an account?</p>
-              <p className="underline cursor-pointer ml-1">Sign up here</p>
+              <p className="underline cursor-pointer ml-1"><Link to="/register">Sign Up here</Link></p>
             </div>
           </div>
+          <div className=" text-sm">
+              <p className="underline cursor-pointer ml-1 flex justify-center"><Link to="/forgot">Forgot Password?</Link></p>
+            </div>
         </form>
       </div>
+      
+      
     </main>
   );
 }

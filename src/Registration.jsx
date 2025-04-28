@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Registration() {
     const [formData, setFormData] = useState({
@@ -128,9 +129,12 @@ function Registration() {
                         >
                             Sign Up
                         </button>
+                        
                     </div>
+                    <div className='flex justify-center'><Link to="/">Already have an account? Login here</Link></div>
                 </form>
             </div>
+          
         </div>
     );
 }
