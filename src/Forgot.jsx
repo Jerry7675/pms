@@ -32,7 +32,7 @@ function Forgot(){
         </div>
 
         <div class="mt-5">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div class="grid gap-y-4">
               <div>
                 <label for="email" class="block text-sm font-bold ml-1 mb-2 dark:text-white">Email address</label>

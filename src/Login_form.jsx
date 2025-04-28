@@ -24,7 +24,7 @@ function Login_form() {
     <main className="min-h-screen bg-gray-800 flex items-center justify-center">
       <div className="w-96 backdrop-blur-lg bg-opacity-80 rounded-lg shadow-lg p-5 bg-gray-900 text-white">
         <h2 className="text-2xl font-bold pb-5">Welcome</h2>
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* Name Input */}
           <div className="mb-4">
             <label htmlFor="name" className="block mb-2 text-sm font-medium">Your name</label>
