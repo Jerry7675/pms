@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Registration from './Registration';
 import Forgot from './Forgot';
 import Otp from './Otp';
+import Policies from './Policies';
 function App() {
 
   
@@ -15,6 +16,7 @@ function App() {
       <Route path="/register" element={<Registration />} />
       <Route path="/forgot" element={<Forgot />} />
       <Route path="/otp" element={<Otp />} />
+      <Route path="/policies" element={<Policies />} />
     </Routes>
     </div>
     

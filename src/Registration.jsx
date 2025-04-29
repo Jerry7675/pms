@@ -110,8 +110,8 @@ function Registration() {
                                 />
                             </div>
                             <div>
-                                I agree to the <a href="/legal/privacy" target="_blank" className="text-indigo-300 hover:text-indigo-200">Privacy Policy</a> and 
-                                <a href="/legal/terms" target="_blank" className="text-indigo-300 hover:text-indigo-200"> Terms</a>
+                                I agree to the <a href="Policies" target="_blank" className="text-indigo-300 hover:text-indigo-200">Privacy,Policies</a> and 
+                                <a href="Policies" target="_blank" className="text-indigo-300 hover:text-indigo-200"> Terms</a>
                             </div>
                         </label>
                     </div>
