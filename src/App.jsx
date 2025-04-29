@@ -9,7 +9,7 @@ function App() {
   return (
     
     <div className='flex flex-col justify-center'>
-      <Login_form />
+      
         <Routes>    
       <Route path="/" element={<Login_form />} />
       <Route path="/register" element={<Registration />} />
