@@ -29,7 +29,7 @@ function Otp({ otp, setOtp }) {
             Confirm
         </button>
     </div>
-    <Link to="/">Back to Login</Link>
+    <Link to="/"className='flex justify-centre'>Back to Login</Link>
 </div>
   );
 }

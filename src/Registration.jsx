@@ -30,8 +30,10 @@ function Registration() {
         }));
     };
 
-    return (
-        <div className="h-screen w-screen"  style={{ background: 'linear-gradient(to bottom, #E6F7FF, #FFFFFF, #E6F7FF)' }}>
+    return ( 
+         <div className="max-h-screen"  style={{ background: 'linear-gradient(to bottom, #E6F7FF, #FFFFFF, #E6F7FF)' }}>
+            <div className='h-screen bg-gradient-to-r from-[#7d8b67a0] via-[#43876b] to-[#3dbbcb] flex items-center justify-center'>
+       
             <div className="max-w-xl mx-auto my-8 py-8 px-4 shadow-lg sm:rounded-lg sm:px-10" 
                  style={{ background: 'linear-gradient(to bottom, #5042d2, #4597bd)', color: '#FFFFFF' }}>
                 <form onSubmit={handleSubmit} className="flex-col space-y-4">
@@ -175,6 +177,8 @@ function Registration() {
                 </form>
             </div>
         </div>
+     </div>
+        
     );
 }
 
