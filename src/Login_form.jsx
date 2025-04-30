@@ -21,17 +21,17 @@ function Login_form() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 flex items-center justify-center">
-      <div className="w-96 backdrop-blur-lg bg-opacity-90 rounded-lg shadow-lg p-5 bg-gray-800 text-white">
-        <h2 className="text-2xl font-bold pb-5 text-center text-yellow-300">Welcome</h2>
+    <main className="min-h-screen bg-gradient-to-r from-[#E6F7FF] via-[#FFFFFF] to-[#E6F7FF] flex items-center justify-center">
+      <div className="w-96 backdrop-blur-lg bg-opacity-90 rounded-lg shadow-lg p-5 bg-gradient-to-b from-[#5042d2] to-[#4597bd] text-black">
+        <h2 className="text-2xl font-bold pb-5 text-center text-white">Welcome</h2>
         <form onSubmit={handleSubmit}>
           {/* Name Input */}
           <div className="mb-4">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-yellow-200">Your name</label>
+            <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">Your name</label>
             <input
               type="text"
               id="name"
-              className="bg-gray-700 border border-gray-500 text-white text-sm rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 w-full py-2.5 px-4"
+              className="bg-[#FFFFFF] border border-gray-300 text-black text-sm rounded-lg focus:ring-2 focus:ring-[#1E90FF] focus:border-[#1E90FF] w-full py-2.5 px-4 placeholder-gray-500"
               placeholder="Sandesh Poudel Chhetri"
               required
               value={formData.name}
@@ -41,11 +41,11 @@ function Login_form() {
 
           {/* Email Input */}
           <div className="mb-4">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-yellow-200">Your email</label>
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Your email</label>
             <input
               type="email"
               id="email"
-              className="bg-gray-700 border border-gray-500 text-white text-sm rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 w-full py-2.5 px-4"
+              className="bg-[#FFFFFF] border border-gray-300 text-black text-sm rounded-lg focus:ring-2 focus:ring-[#1E90FF] focus:border-[#1E90FF] w-full py-2.5 px-4 placeholder-gray-500"
               placeholder="Yourmail@gmail.com"
               required
               value={formData.email}
@@ -55,11 +55,11 @@ function Login_form() {
 
           {/* Password Input */}
           <div className="mb-4">
-            <label htmlFor="password" className="block mb-2 text-sm font-medium text-yellow-200">Your password</label>
+            <label htmlFor="password" className="block mb-2 text-sm font-medium text-white">Your password</label>
             <input
               type="password"
               id="password"
-              className="bg-gray-700 border border-gray-500 text-white text-sm rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 w-full py-2.5 px-4"
+              className="bg-[#FFFFFF] border border-gray-300 text-black text-sm rounded-lg focus:ring-2 focus:ring-[#1E90FF] focus:border-[#1E90FF] w-full py-2.5 px-4"
               placeholder="*********"
               required
               value={formData.password}
@@ -70,18 +70,19 @@ function Login_form() {
           <div className="flex items-center justify-between mb-4">
             <button
               type="submit"
-              className="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-2 focus:ring-yellow-400 font-medium rounded-lg text-sm py-2.5 px-5 w-full sm:w-auto"
+              className="text-white bg-[#1E90FF] hover:bg-[#87CEFA] focus:ring-2 focus:ring-[#1E90FF] font-medium rounded-lg text-sm py-2.5 px-5 w-full sm:w-auto"
             >
               SignIn
             </button>
-            <div className="flex items-center text-sm text-yellow-200">
+            <div className="flex items-center text-sm text-white">
               <p>Don't have an account?</p>
-              <p className="underline cursor-pointer ml-1"><Link to="/register">Sign Up here</Link></p>
+              <p className="cursor-pointer ml-1 text-[#00BFFF]"><Link to="/register" className="text-[#00BFFF]
+              ">Sign Up here</Link></p>
             </div>
           </div>
           <div className="text-sm">
-              <p className="underline cursor-pointer ml-1 flex justify-center text-yellow-200"><Link to="/forgot">Forgot Password?</Link></p>
-            </div>
+            <p className="underline cursor-pointer ml-1 flex justify-center  text-white"><Link to="/forgot">Forgot Password?</Link></p>
+          </div>
         </form>
       </div>
     </main>
