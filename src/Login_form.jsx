@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, Navigate, NavLink } from 'react-router-dom'
 
 function Login_form() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,10 @@ function Login_form() {
       [e.target.id]: e.target.value
     });
   };
-
+  const handleClick =(e) => {
+   {Navigate('/Management_login')};
+  }
+ 
   return (
     <main className="max-h-screen bg-gradient-to-r from-[#7d8b67a0] via-[#43876b] to-[#3dbbcb] flex items-center justify-center">
       <div className='flex items-center justify-center h-screen'>
@@ -84,16 +87,24 @@ function Login_form() {
             </div>
           </div>
           
-          <div className="text-sm">
+          <div className=" text-sm py-2.5 px-5">
             <Link 
               to="/forgot" 
               className="flex justify-center text-blue-700 hover:text-blue-600 underline"
             >
               Forgot Password?
             </Link>
+            
           </div>
         </form>
+        <div className='w-400px'>
+          <button onClick = {handleClick}
+              type="submit"
+              className="text-white bg-[#1E90FF] flex flex-col hover:bg-[#87CEFA] focus:ring-4 focus:ring-[#4dc7e2] font-medium rounded-lg text-sm py-2.5 px-5 w-full m-t-10px sm:w-auto" 
+            >< Link to ="/Management_login">Management Login</Link></button>
         </div>
+        </div>
+        
       </div>
       
     </main>
